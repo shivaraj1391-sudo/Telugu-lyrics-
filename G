@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Lyrics Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#007bff;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    margin-bottom:15px;
+}
+
+input{
+    width:80%;
+    max-width:400px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background:#28a745;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#218838;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:20px auto;
+}
+
+.song{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    margin-bottom:20px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+@media(max-width:600px){
+    input{
+        width:100%;
+    }
+
+    button{
+        width:100%;
+        margin-top:10px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🎵 My Lyrics Website</h1>
+
+<input type="text" id="searchBox" placeholder="Search Song...">
+
+<br>
+
+<button onclick="searchLyrics()">Search</button>
+
+</header>
+
+<div class="container">
+
+<div class="song">
+<h2>Naa Song</h2>
+<p id="lyrics">
+Welcome to My Lyrics Website.<br><br>
+Here you can publish your favorite Telugu, Hindi and English song lyrics.
+</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 My Lyrics Website
+</footer>
+
+<script>
+function searchLyrics(){
+
+let song=document.getElementById("searchBox").value.toLowerCase();
+
+if(song==""){
+alert("Please enter song name.");
+return;
+}
+
+if(song=="naa song"){
+document.getElementById("lyrics").innerHTML=
+"<b>Naa Song</b><br><br>Lyrics Found Successfully!";
+}
+else{
+document.getElementById("lyrics").innerHTML=
+"No Lyrics Found.";
+}
+
+}
+</script>
+
+</body>
+</html>
